@@ -21,7 +21,7 @@ enum InputError: Error {
 
 do {
   // Get user input
-  print("Enter a mass: ")
+  print("Enter the mass of your object: ")
   guard let input = readLine(), let userMass = Double(input) else {
     throw InputError.invalidInput
   }
@@ -29,7 +29,7 @@ do {
   // User input above 0
   if (userMass > 0){
     let energy = userMass * pow(Double(speedOfLight), 2)
-    print("The the energy of the mass is \(round(energy * 1000)/1000)")
+    print("The energy of the mass is \(round(energy * 1000)/1000)J" )
 
   } else {
     // User input below 1
